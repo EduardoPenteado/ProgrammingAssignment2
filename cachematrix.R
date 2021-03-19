@@ -1,15 +1,18 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
-
+#This function cache the matrix
 makeCacheMatrix <- function(x = matrix()) {
-
+      x
 }
 
-
-## Write a short comment describing this function
-
+# This function returns inverse of the a matrix if the determinant is different of zero
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    # Check the determinant
+    if (det(x) != 0) {
+      inv <- solve(x)
+      inv
+    }
+    else {
+      # Can't calculate the inverse
+      print("This matriz is not invertible")
+    }
 }
